@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.service.NEOService;
+
 import java.sql.SQLOutput;
 import java.time.LocalDate;
 
@@ -13,6 +15,8 @@ public class Main {
         System.out.println();
         LocalDate date = LocalDate.now();
         System.out.println(date);
+        NEOService service = new NEOService();
+        service.getNEODate(String.valueOf(date));
 
     }
 }

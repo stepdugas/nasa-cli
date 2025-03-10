@@ -15,6 +15,9 @@ public class NEOService {
                 "?start_date=" + date +
                 "&end_date=" + date +
                 "&api_key=" + API_KEY;
+        String response = template.getForObject(url, String.class).toString();
+        System.out.println(response);
+
     }
 
 
