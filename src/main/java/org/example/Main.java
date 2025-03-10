@@ -18,6 +18,7 @@ public class Main {
         //System.out.println(date);
         NEOService service = new NEOService();
         NEOFeedResponse response = service.getNEODate(String.valueOf(date));
+        //System.out.println(repsonse);
 
     }
 }
