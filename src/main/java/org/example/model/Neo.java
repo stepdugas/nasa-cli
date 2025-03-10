@@ -12,6 +12,9 @@ public class Neo {
     @JsonProperty("is_potentially_hazardous_asteroid")
     private boolean potentiallyHazardousAsteroid;
 
+    @JsonProperty("estimated_diameter")
+    private EstimatedDiameter estimatedDiameter;
+
     public String getId() {
         return id;
     }
@@ -28,6 +31,14 @@ public class Neo {
         this.name = name;
     }
 
+    public EstimatedDiameter getEstimatedDiameter() {
+        return estimatedDiameter;
+    }
+
+    public void setEstimatedDiameter(EstimatedDiameter estimatedDiameter) {
+        this.estimatedDiameter = estimatedDiameter;
+    }
+
     public boolean isPotentiallyHazardousAsteroid() {
         return potentiallyHazardousAsteroid;
     }
@@ -42,6 +53,7 @@ public class Neo {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", potentiallyHazardousAsteroid=" + potentiallyHazardousAsteroid +
+                ", estimatedDiameter=" + estimatedDiameter +
                 '}';
     }
 }
