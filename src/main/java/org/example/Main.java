@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.model.NEOFeedResponse;
 import org.example.service.NEOService;
 
 import java.sql.SQLOutput;
@@ -14,9 +15,9 @@ public class Main {
         System.out.printf("Welcome to my Near Earth Object App");
         System.out.println();
         LocalDate date = LocalDate.now();
-        System.out.println(date);
+        //System.out.println(date);
         NEOService service = new NEOService();
-        service.getNEODate(String.valueOf(date));
+        NEOFeedResponse response = service.getNEODate(String.valueOf(date));
 
     }
 }
