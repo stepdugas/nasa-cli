@@ -17,4 +17,11 @@ public class NEOFeedResponse {
     public void setNearEarthObjects(Map<String, List<Neo>> nearEarthObjects) {
         this.nearEarthObjects = nearEarthObjects;
     }
+
+    @Override
+    public String toString() {
+        return "NEOFeedResponse{" +
+                "nearEarthObjects=" + nearEarthObjects +
+                '}';
+    }
 }

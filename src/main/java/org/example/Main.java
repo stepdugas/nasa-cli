@@ -1,10 +1,12 @@
 package org.example;
 
 import org.example.model.NEOFeedResponse;
+import org.example.model.Neo;
 import org.example.service.NEOService;
 
 import java.sql.SQLOutput;
 import java.time.LocalDate;
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -18,7 +20,19 @@ public class Main {
         //System.out.println(date);
         NEOService service = new NEOService();
         NEOFeedResponse response = service.getNEODate(String.valueOf(date));
-        //System.out.println(repsonse);
+
+        for (String key : response.getNearEarthObjects().keySet() ) {
+            List<Neo> neoList = response.getNearEarthObjects().get(key);
+            int count = neoList.size();
+            System.out.println("For Date: " + key + " there are " + count + " near earth objects");
+            for (Neo n : neoList) {
+                System.out.println("\tId: " + n.getId() );
+                System.out.println("\tName: " + n.getName() );
+                System.out.println("\tPotentially hazardous: " + n.isPotentiallyHazardousAsteroid() );
+            }
+        }
+
+
 
     }
 }
