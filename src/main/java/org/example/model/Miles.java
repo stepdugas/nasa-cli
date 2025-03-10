@@ -1,8 +1,13 @@
 package org.example.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Miles {
 
+    @JsonProperty("estimated_diameter_min")
     private double estimatedDiameterMin;
+
+    @JsonProperty("estimated_diameter_max")
     private double estimatedDiameterMax;
 
     public double getEstimatedDiameterMin() {

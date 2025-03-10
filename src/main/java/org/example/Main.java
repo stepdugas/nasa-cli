@@ -29,6 +29,9 @@ public class Main {
                 System.out.println("\tId: " + n.getId() );
                 System.out.println("\tName: " + n.getName() );
                 System.out.println("\tPotentially hazardous: " + n.isPotentiallyHazardousAsteroid() );
+                System.out.println("\tEstimated Diameter: " );
+                System.out.println("\t\tMin (in miles): " + n.getEstimatedDiameter().getMiles().getEstimatedDiameterMin());
+                System.out.println("\t\tMax (in miles): " + n.getEstimatedDiameter().getMiles().getEstimatedDiameterMax());
             }
         }
 
